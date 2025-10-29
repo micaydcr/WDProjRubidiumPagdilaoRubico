@@ -8,20 +8,20 @@
 
 ### WEBSITE OUTLINE:
 
-1. ***Home Page***
+***1. Home Page***
 - Welcome page
 - Will have the description and title
 - Will have 3 main buttons which will lead players to different webpages – “Freeplay, Challenge mode, About Us”
 
-2. ***Freeplay Mode***
+***2. Freeplay Mode***
 - This will have the topping selections on the right hand side of the page
 - This includes the base cake that user will decorate
 - This will also have two buttons, one leading the users back to the home page, and the other leading them to save their decorated cakes as a .png file.
 
-3. ***Challenge Mode***
+***3. Challenge Mode***
 - This will have the same interface as the freeplay mode, all though there will be a specific category in the middle, and also a 3 minute timer 
 
-4. ***Save Mode***
+***4. Save Mode***
 - After designing the cake, it will transfer onto a cake stand, then there would be an option to save it. This will lead us to the Save Mode wherein the save feature will allow the users to save their work on their devices as an image (.png). Afterwards, it will let the user have the option to go back to the homepage.
 
 ### WAYS ON HOW JS WOULD BE INCORPORATED:
@@ -30,5 +30,14 @@
 - Runs the random theme generator for Challenge Mode.
 - Adds animations and visual effects when decorations are placed.
 - Saves cake designs using local storage, so players can revisit their creations.
+
+### HOW WOULD THE WEBSITE LOOK LIKE?
+
+#### HOMEPAGE:
+![homepage](blob:https://www.messenger.com/c5096119-6ef1-49f2-9f67-9abfc3c9a495)
+
+### FREEPLAY MODE:
+
+### CHALLENGE MODE:
 
 
