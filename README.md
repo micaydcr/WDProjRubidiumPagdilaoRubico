@@ -36,8 +36,8 @@
 #### HOMEPAGE:
 ![homepage](blob:https://www.messenger.com/c5096119-6ef1-49f2-9f67-9abfc3c9a495)
 
-### FREEPLAY MODE:
+#### FREEPLAY MODE:
 
-### CHALLENGE MODE:
+#### CHALLENGE MODE:
 
 
