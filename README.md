@@ -34,10 +34,12 @@
 ### HOW WOULD THE WEBSITE LOOK LIKE?
 
 #### HOMEPAGE:
-![homepage](blob:https://www.messenger.com/c5096119-6ef1-49f2-9f67-9abfc3c9a495)
+![homepage](https://media.discordapp.net/attachments/1182939256776310827/1433091750083166338/image.png?ex=69036e32&is=69021cb2&hm=c0fa63e31634c8a3947bdbb8a0901f2d41972c491b37f0146380c91a74c06ca2&=&format=webp&quality=lossless&width=1547&height=869)
 
 #### FREEPLAY MODE:
+![freeplay](https://media.discordapp.net/attachments/1182939256776310827/1433091750943260755/image.png?ex=69036e32&is=69021cb2&hm=5582c24b60cf9bcdcd1696b1c39a2f8889e94c120d9b4a0d0f0e4763bd863c83&=&format=webp&quality=lossless&width=1553&height=869)
 
 #### CHALLENGE MODE:
+![challenge](https://media.discordapp.net/attachments/1182939256776310827/1433091752671182888/image.png?ex=69036e33&is=69021cb3&hm=0186cfd802ec00705517c7fe2c2844c3051fdf1552a3c4e742ea1fcac9b226f8&=&format=webp&quality=lossless&width=1556&height=869)
 
 
