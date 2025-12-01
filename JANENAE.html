@@ -10,71 +10,78 @@
         background: #f0f0f0;
         overflow: hidden; /* Prevent scrollbars when dragging */
     }
-    img {
-        position: absolute; /* Needed for free movement */
-        top: 100px;
-        left: 100px;
+    img.draggable {
+        position: absolute; /* Needed for movement */
         cursor: grab;
-        user-select: none; /* Prevent text/image selection */
+        user-select: none; /* Prevent default selection */
     }
-    img:active {
+    img.draggable:active {
         cursor: grabbing;
     }
 </style>
 </head>
 <body>
 
-<!-- The image to drag -->
-<img id="draggable" src="https://www.gratistodo.com/wp-content/uploads/2016/08/peppa-pig-wallpaper-gratis.jpg" alt="Draggable" width="100" length="200">
+<!-- Draggable images -->
+<img class="draggable" src="https://www.gratistodo.com/wp-content/uploads/2016/08/peppa-pig-wallpaper-gratis.jpg" width="200" length="300">
 
+<img class="draggable" src="https://tse1.mm.bing.net/th/id/OIP.AwzXxFxHmy0fGnDnNZyMlgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" width="150" length="150">
 <script>
 (function() {
-    const img = document.getElementById('draggable');
+
+    // Select all draggable images
+    const imgs = document.querySelectorAll('.draggable');
+
+    // Track which image is currently being dragged
+    let activeImg = null;
     let offsetX = 0, offsetY = 0;
-    let isDragging = false;
 
-    // Mouse down: start dragging
-    img.addEventListener('mousedown', function(e) {
-        isDragging = true;
-        // Calculate offset between mouse and image top-left
-        offsetX = e.clientX - img.offsetLeft;
-        offsetY = e.clientY - img.offsetTop;
-        e.preventDefault(); // Prevent default image drag ghost
-    });
+    // Add events to each image
+    imgs.forEach(img => {
 
-    // Mouse move: update position
-    document.addEventListener('mousemove', function(e) {
-        if (isDragging) {
-            img.style.left = (e.clientX - offsetX) + 'px';
-            img.style.top = (e.clientY - offsetY) + 'px';
-        }
-    });
+        // ---- MOUSE DOWN ----
+        img.addEventListener('mousedown', e => {
+            activeImg = img;
+            offsetX = e.clientX - img.offsetLeft;
+            offsetY = e.clientY - img.offsetTop;
+            e.preventDefault();
+        });
 
-    // Mouse up: stop dragging
-    document.addEventListener('mouseup', function() {
-        isDragging = false;
-    });
-
-    // Optional: Touch support for mobile
-    img.addEventListener('touchstart', function(e) {
-        isDragging = true;
-        const touch = e.touches[0];
-        offsetX = touch.clientX - img.offsetLeft;
-        offsetY = touch.clientY - img.offsetTop;
-        e.preventDefault();
-    });
-
-    document.addEventListener('touchmove', function(e) {
-        if (isDragging) {
+        // ---- TOUCH START ----
+        img.addEventListener('touchstart', e => {
+            activeImg = img;
             const touch = e.touches[0];
-            img.style.left = (touch.clientX - offsetX) + 'px';
-            img.style.top = (touch.clientY - offsetY) + 'px';
+            offsetX = touch.clientX - img.offsetLeft;
+            offsetY = touch.clientY - img.offsetTop;
+            e.preventDefault();
+        });
+    });
+
+    // ---- MOVE IMAGE ----
+    document.addEventListener('mousemove', e => {
+        if (activeImg) {
+            activeImg.style.left = (e.clientX - offsetX) + 'px';
+            activeImg.style.top = (e.clientY - offsetY) + 'px';
         }
     });
 
-    document.addEventListener('touchend', function() {
-        isDragging = false;
+    document.addEventListener('touchmove', e => {
+        if (activeImg) {
+            const touch = e.touches[0];
+            activeImg.style.left = (touch.clientX - offsetX) + 'px';
+            activeImg.style.top = (touch.clientY - offsetY) + 'px';
+        }
     });
+
+    // ---- STOP DRAGGING ----
+    document.addEventListener('mouseup', () => {
+        activeImg = null;
+    });
+
+    document.addEventListener('touchend', () => {
+        activeImg = null;
+    });
+
 })();
 </script>
 
