@@ -13,14 +13,25 @@ body {
     background-image: url(backgroundprojectcs.png);
     background-size: 100% 95%;
     font-family: sans-serif;
-    animation: fadeIn 1.5s ease forwards;
-    opacity: 0
+    opacity: 0; 
+    animation: fadeIn 1.5s ease forwards; 
+}
 
-    @keyframes fadeIn {
-  to {
-    opacity: 1;
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
     }
-  }
+}
+
+
+button {
+    transition: transform 0.3s ease, background 0.3s ease; 
+}
+
+button:hover {
+    transform: scale(1.05); 
+    background: linear-gradient(180deg,#ffe6e6,#ffd6d6); 
 }
 
 #stage-container {
@@ -149,7 +160,7 @@ button{
 
 #homeButton {
     position: fixed;
-    top: 650px; /* adjust as needed */
+    top: 650px; 
     left: 125px;
     padding: 10px 20px;
     font-size: 40px;
@@ -242,7 +253,8 @@ document.getElementById('homeButton').addEventListener('click', () => {
 const CATEGORIES = {
     decorations: [
         'strawberry1.png',
-       'Blueberry_Transparent_Clip_Art_Image.png',
+       'Blueberry_Transparent_Clip_Art_Image.png', 'pearll.png', 
+       'ribbon.png',
        'white choco.png','choco icing.png',
        'strawberry icing.png','blue icing.png',
        'candle.png','sprinkles.png','rainbow sprinkles.png','image (0).png','image (1).png',

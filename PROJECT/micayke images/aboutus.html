@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+  <html lang="en">
+    
+<head>
+<meta charset="UTF-8">
+<title>MiCayke Decorating!</title>
+<link rel="icon" type="image/x-icon" href="Arcade Gamer (2).png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Quicksand:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<style>
+body{
+   background: url("https://i.pinimg.com/originals/b8/bd/75/b8bd75128eec43631eb19e9c1bb5adad.gif") no-repeat center center;
+   background-size: 115% 115%;
+  font-family: 'Quicksand', sans-serif;
+    opacity: 0;
+  animation: fadeIn 1.5s ease forwards; 
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+.box, .box1, .box2 {
+    border-radius: 15px;
+    border: 3px dotted #ffc3df;
+    padding: 20px;
+    width: 1000px;
+    background-color: #ffe7edb3;
+    margin-left: 335px;
+    margin-top: 30px;
+    box-shadow: 4px 2px 4px #b97f91;
+    height: 200px; 
+    overflow-y: auto; 
+}
+
+
+.box1, .box2 {
+    height: 170px;
+    margin-top: 25px;
+    overflow-y: auto;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: -7px;
+    text-shadow: 2px 2px 4px #966483;
+    line-height: 1.6; /* increase spacing between lines */
+}
+
+
+    h1 {
+font-family: 'Baloo 2', cursive;
+color: #ffa3cb;
+font-size: 25px;
+margin-top: -8px;
+    }
+
+    header h {
+font-family: 'Pacifico', cursive; 
+font-weight: bold;
+font-style:italic;
+font-size: 200px;
+color: #ffa3cb;
+font-size: 70px;
+margin-top: 10px;
+margin-left: 905px;
+    }
+
+    button {
+    transition: transform 0.3s ease, background 0.3s ease; 
+}
+
+button:hover {
+    transform: scale(1.05); 
+    background: linear-gradient(180deg,#ffe6e6,#ffd6d6); 
+}
+
+#homeButton {
+    position: fixed;
+    top: 650px; 
+    left: 125px;
+    padding: 10px 20px;
+    font-size: 40px;
+    border-radius: 10px;
+    border: 1px solid #f0c9d0;
+    background: linear-gradient(180deg,#fff,#ffeeef);
+    cursor: pointer;
+    box-shadow: #775663;
+    z-index: 1000;
+    margin-left: -50px;
+    color: #ffa3cb;
+    font-family: 'Baloo 2', cursive;
+    font-weight:  bold;
+}
+
+  </style>
+
+    <header>
+    <h>ABOUT US !<h>
+    </header>
+
+    <button id="homeButton" class="homeButton">🏠 Home</button>
+
+    <div class="box">
+        <h1>About the Game !</h1>
+    <h2>MiCayke Decorating is a simple yet interactive web game where users can design and decorate their own cakes. In the decorator mode, players can drag and drop toppings like strawberries, icing, sprinkles, and many more onto the cake–all of which will have pastel visuals and smooth animations. This game aims to encourage creativity and design skills by letting players freely express themselves through decoration. It is designed to be easy to use and enjoyable for players of all ages.</h2  >
+
+
+    </div>
+    
+    <div class="box1">
+        <h1>About the Creators !</h1>
+        <h2>The creators are Janaya Pagdilao and Michaela Alexa Rubico from 9 – Rubidium ‘29. The name MiCayke was inspired by Rubico’s nickname, Micay, combined with the word “cake.” They chose this concept because of their shared interest in decorating, creative design, and most especially, cake! They collaborated to transform their idea into a fun and visually appealing game.
+</h2>
+<br>
+<h2> At first, it was a bit hard to make the game since they both weren't really familiar with drag and drop functions, but upon researching and after many trial and errors, they were able to fix it, making the cake decorating game come to life. Their personal favorite part of the game is the pink theme, and the most enjoyable part was playing with the decoration game afterwards. </h2>
+    </div>
+
+    <div class="box2">
+        <h1>References:  </h1>
+        <h2>Freepik. (n.d.). Flavored ice cream swirl illustration | Premium Vector. Pinterest. https://ph.pinterest.com/pin/319403798595067539/
+Freepik. (n.d.). Flavoured ice cream swirl illustration | Premium Vector. Pinterest. https://ph.pinterest.com/pin/71424344083517027/
+Freepik. (n.d.). Flavoured ice cream swirl illustration | Premium Vector. Pinterest. https://ph.pinterest.com/pin/4644405859123738/
+Freepik. (n.d.). Flavored ice cream swirl illustration | Premium Vector. Pinterest. https://ph.pinterest.com/pin/62909726039594704/
+Freepik. (n.d.). Flavored ice cream swirl illustration | Premium Vector. Pinterest. https://ph.pinterest.com/pin/15762667443255876/
+Individual Number Candles (Gold). (n.d.). Bake and Deco Warehouse. https://www.bakeanddeco.com.au/metallic-gold-number-candles/?srsltid=AfmBOopJptLbELH0riI8RtfE7T4GfbZ1pS6DmLZSN1vyAGq7OE5PpkIU
+Vecteezy. (n.d.). Vector doodle traditional burning candle isolated illustration. Pinterest. https://ph.pinterest.com/pin/319122323617380222/
+<br>
+Thank you also to Sir Roy for his guidance and supportiveness throughout our project!</h2>
+
+<script>
+  document.getElementById('homeButton').addEventListener('click', () => {
+    window.location.href = "homepage.html"; 
+});
+</script>

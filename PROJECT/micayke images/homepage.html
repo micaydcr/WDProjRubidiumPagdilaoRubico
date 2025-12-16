@@ -17,14 +17,17 @@ html, body {
   overflow: hidden;
   display: flex;
   justify-content: center;
-  animation: fadeIn 1.5s ease forwards;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards; 
+}
+
 
 @keyframes fadeIn {
     to {
         opacity: 1;
     }
 }
-}
+
 
 
 .center-container {
@@ -61,7 +64,7 @@ html, body {
 
 .button2{
      padding: 20px 40px;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 600;
   font-family: arial, sans-serif;
   cursor: pointer;
@@ -72,7 +75,19 @@ html, body {
   z-index: 10;
   margin-left: -50px; 
 }
-
+.button3{
+     padding: 20px 40px;
+  font-size: 50px;
+  font-weight: 600;
+  font-family: arial, sans-serif;
+  cursor: pointer;
+  background: linear-gradient(180deg,#fff,#ffeeef);
+  border:1px solid #d78d99; 
+  border-radius:10px;
+  color:#ce8ea8;
+  z-index: 10;
+  margin-left: -50px; 
+}
 .popup {
   position: fixed;
   inset: 0;
@@ -122,6 +137,15 @@ html, body {
   color: white;
   cursor: pointer;
 }
+
+button {
+    transition: transform 0.3s ease, background 0.3s ease; 
+}
+
+button:hover {
+    transform: scale(1.05); 
+    background: linear-gradient(180deg,#ffe6e6,#ffd6d6); 
+}
 </style>
 </head>
 
@@ -131,6 +155,7 @@ html, body {
   <img src="Arcade Gamer (2).png" alt="Arcade Image" class="styled-image">
   <button id="openMenu">Open Menu</button>
     <button id="startDecorating" class="button2">Start Decorating</button>
+    <button id="aboutus" class="button3">About Us</button>
 </div>
 
 <div id="popupMenu" class="popup">
@@ -165,6 +190,9 @@ document.getElementById("startDecorating").addEventListener("click", () => {
     window.location.href = "cakedecorating.html"; 
 });
 
+document.getElementById("aboutus").addEventListener("click", () => {
+    window.location.href = "aboutus.html"; 
+});
 </script>
 
 </body>
