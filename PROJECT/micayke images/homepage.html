@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MiCayke Decorating!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  background: url("https://i.pinimg.com/originals/b8/bd/75/b8bd75128eec43631eb19e9c1bb5adad.gif") no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 1.5s ease forwards;
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+}
+
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+
+.styled-image {
+  width: 900px;
+  max-width: 95vw;
+  height: auto;
+    margin-left: -140px;    
+}
+
+
+#openMenu {
+  padding: 20px 40px;
+  font-size: 40px;
+  font-weight: 600;
+  font-family: arial, sans-serif;
+  cursor: pointer;
+  background: linear-gradient(180deg,#fff,#ffeeef);
+  border:1px solid #d78d99; 
+  border-radius:10px;
+  color:#ce8ea8;
+  z-index: 10;
+  margin-left: -50px;
+}
+
+.button2{
+     padding: 20px 40px;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: arial, sans-serif;
+  cursor: pointer;
+  background: linear-gradient(180deg,#fff,#ffeeef);
+  border:1px solid #d78d99; 
+  border-radius:10px;
+  color:#ce8ea8;
+  z-index: 10;
+  margin-left: -50px; 
+}
+
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 999;
+}
+
+.popup.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-content {
+  background: transparent;
+  padding: 0;
+  border-radius: 12px;
+  text-align: center;
+  transform: scale(0.9);
+  transition: transform 0.4s ease;
+}
+
+.popup.show .popup-content {
+  transform: scale(1);
+}
+
+
+.popup-image {
+  width: 1500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  pointer-events: none;
+}
+
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="center-container">
+  <img src="Arcade Gamer (2).png" alt="Arcade Image" class="styled-image">
+  <button id="openMenu">Open Menu</button>
+    <button id="startDecorating" class="button2">Start Decorating</button>
+</div>
+
+<div id="popupMenu" class="popup">
+  <span class="close">&times;</span>
+  <div class="popup-content">
+    <img src="Arcade Gamer (6).png" class="popup-image">
+  </div>
+</div>
+
+
+
+<script>
+const openBtn = document.getElementById("openMenu");
+const popup = document.getElementById("popupMenu");
+const closeBtn = document.querySelector(".close");
+
+openBtn.addEventListener("click", () => {
+  popup.classList.add("show");
+});
+
+closeBtn.addEventListener("click", () => {
+  popup.classList.remove("show");
+});
+
+popup.addEventListener("click", (e) => {
+  if (e.target === popup) {
+    popup.classList.remove("show");
+  }
+});
+
+document.getElementById("startDecorating").addEventListener("click", () => {
+    window.location.href = "cakedecorating.html"; 
+});
+
+</script>
+
+</body>
+</html>
