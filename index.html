@@ -14,11 +14,12 @@ html, body {
   font-family: sans-serif;
   background: url("https://i.pinimg.com/originals/b8/bd/75/b8bd75128eec43631eb19e9c1bb5adad.gif") no-repeat center center;
   background-size: cover;
-  overflow: hidden;
-  display: flex;
   justify-content: center;
   opacity: 0;
-  animation: fadeIn 1.5s ease forwards; 
+  animation: fadeIn 1.5s ease forwards;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: block;
 }
 
 
@@ -31,12 +32,12 @@ html, body {
 
 
 .center-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  max-height: 100vh;
-  overflow-y: auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+max-height: 100vh;
+overflow-y: auto;
 }
 
 
@@ -136,6 +137,7 @@ html, body {
   font-size: 28px;
   color: white;
   cursor: pointer;
+   z-index: 1000;
 }
 
 button {
