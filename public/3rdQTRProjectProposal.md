@@ -5,7 +5,7 @@
 ## Features 
 - works on both phone and laptop
 - allows the user to download the cake they made
-- 3rd feature ()
+- make a webpage wherein users can inpute their suggestions
 
 ## Details
 - we will use html forms on ... and save it to local storage
