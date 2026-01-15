@@ -12,4 +12,4 @@
 - we will show the data to cleect on ...
 
 ## Definition of Done
-
+- Our "definition of done" includes for the features said above to be executed in a manner that is within our capabilities, while also functioning without any issues in our devices, this includes not only laptops, but also mobile phones. To expound,  our definition of done  requires that the features are fully functional, responsive across different screen sizes, and provide a smooth and consistent user experience regardless of the device used.
