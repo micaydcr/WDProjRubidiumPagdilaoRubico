@@ -7,6 +7,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
+:root {
+    --cake-top: #fffaf2;
+    --cake-bottom: #fff1e6;
+}
+
+
 body {
     margin: 0;
     height: 100vh;
@@ -95,20 +102,22 @@ button:hover {
     z-index: 1000;
 }
 
-.bubbles{
-          z-index: 100;
-}
+
 .tier {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(180deg,#fffaf2,#fff1e6);
+    background: linear-gradient(
+        180deg,
+        var(--cake-top),
+        var(--cake-bottom)
+    );
     border-radius: 24px;
     box-shadow: 0 8px 18px rgba(0,0,0,0.12) inset;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 300ms ease;
+    transition: transform 300ms ease, background 300ms ease;
     z-index: 10;
 }
 
@@ -223,6 +232,16 @@ img.draggable:active {
         <div class="controls">
             <button id="randomizeAdd">🎨 Random Decor</button>
             <button id="clear">🧼 Clear</button>
+            <button id="clear">⬇️ Download (soon !)</button>
+            <label style="display:flex; align-items:center; gap:6px;">
+                Cake Color:
+                <input 
+                    type="color" 
+                    id="cakeColorPicker" 
+                    value="#fff1e6"
+                    style="width:40px; height:32px; border:none; cursor:pointer;"
+                >
+            </label>
         </div>
     </div>
     <div class="hint">
@@ -246,6 +265,36 @@ img.draggable:active {
 
 
 <script>
+
+const cakePicker = document.getElementById('cakeColorPicker');
+
+cakePicker.addEventListener('input', e => {
+    const baseColor = e.target.value;
+
+    // create a lighter top color automatically
+    const topColor = lightenColor(baseColor, 20);
+
+    document.documentElement.style.setProperty('--cake-top', topColor);
+    document.documentElement.style.setProperty('--cake-bottom', baseColor);
+});
+
+function lightenColor(hex, percent) {
+    let num = parseInt(hex.replace("#",""),16),
+        r = (num >> 16) + percent,
+        g = (num >> 8 & 0x00FF) + percent,
+        b = (num & 0x0000FF) + percent;
+
+    r = r > 255 ? 255 : r;
+    g = g > 255 ? 255 : g;
+    b = b > 255 ? 255 : b;
+
+    return "#" + (b | (g << 8) | (r << 16)).toString(16).padStart(6,"0");
+}
+
+document.getElementById('homeButton').addEventListener('click', () => {
+    window.location.href = "../index.html"; 
+});
+
 document.getElementById('homeButton').addEventListener('click', () => {
     window.location.href = "../index.html"; 
 });
