@@ -34,16 +34,17 @@
 ### HOW WOULD THE WEBSITE LOOK LIKE?
 
 #### HOMEPAGE:
-![homepage](homepage.jpeg)
+![homepage](../assets/homepage.jpeg)
 
 #### FREEPLAY MODE:
-![freeplay](freeplaymode.jpeg)
+![freeplay](../assets/freeplaymode.jpeg)
 
 #### CHALLENGE MODE:
-![challenge](challengemode.jpeg)
+![challenge](../assets/challengemode.jpeg)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  
+
 # Q3 Proposal Update
 
 ## MiCayke Decorating!
@@ -63,7 +64,7 @@
 ## Definition of Done
 - Our "definition of done" includes for the features said above to be executed in a manner that is within our capabilities, while also functioning without any issues in our devices, this includes not only laptops, but also mobile phones. To expound,  our definition of done  requires that the features are fully functional, responsive across different screen sizes, and provide a smooth and consistent user experience regardless of the device used.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------
 
 # FINAL MODIFICATION PROPOSAL
 
