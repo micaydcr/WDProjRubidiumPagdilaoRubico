@@ -86,4 +86,12 @@
 
 ## Wireframes
 
-cakedecorating.html
+Menu (page with instructions):
+
+Html Forms Before Answering:
+Html Forms After Answering (showing update and delete function):
+Page Dedicated to Suggestions:
+
+Cake Decorating Page Confirmation Prompt:
+
+[Ideally Shown on Both Phone and Laptop View..]
