@@ -80,6 +80,10 @@
 
 - **Download Accuracy**: The cake download feature will be fixed so that the saved .png file exactly matches the cake preview displayed on the screen, ***maintaning visual consistency***. 
 
+## Description
+
+- These updates provide a clear and comprehensive enhancement of the website. focusing on improving user experience, enabling full CRUD functionality for suggestions, ensuring smooth interaction across devices, preventing loss of progress and maintaining accuracy between the on-screen cake and downloaded image.
+
 ## Wireframes
 
 cakedecorating.html
