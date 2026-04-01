@@ -86,12 +86,20 @@
 
 ## Wireframes
 
-Menu (page with instructions):
+### MENU:
+![menu](../assets/menu.png)
 
-Html Forms Before Answering:
-Html Forms After Answering (showing update and delete function):
-Page Dedicated to Suggestions:
+### HTML FORMS: (before inputs)
+![htmlformsA](../assets/form.png)
 
-Cake Decorating Page Confirmation Prompt:
+### HTML FORMS: (outputs)
+![htmlformsB](../assets/responses.png)
 
-[Ideally Shown on Both Phone and Laptop View..]
+### SUGGESTION PAGE:
+![suggestions](../assets/suggestions.png)
+
+### CONFIRMATION PROMPT:
+![comfirmation](../assets/confirmation.png)
+
+### ABOUT US: (same as before)
+![aboutus](../assets/aboutus.png)
