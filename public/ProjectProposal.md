@@ -68,26 +68,31 @@
 
 # FINAL MODIFICATION PROPOSAL
 
-## Updates on Features
+## Minor and Major Updates on Features
 
 - **Instruction Page**: The small menu pop-up will be replaced with a dedicated page containing detailed instructions on how to use the site. This is to provide users with clear guidance ***for better experience***.
-
-- **Improved HTML Forms**: Users will be able to ***edit/update and delete*** their responses, and all submitted suggestions will be displayed on a dedicated page ***visible to all users***.
-
-- **Device-Friendly**: The site will work seamlessly on both phones and laptops, with the layouts and interactive features (such as double-click functions) ***optimized for different screen sizes***.
 
 - **Progress Confirmation**: When attempting to close the cake decorating page, users will receive a confirmation prompt to ***prevent accidental loss of progress***.
 
 - **Download Accuracy**: The cake download feature will be fixed so that the saved .png file exactly matches the cake preview displayed on the screen, ***maintaning visual consistency***. 
 
+- **Improved HTML Forms**: Users will be able to ***edit/update and delete*** their responses, and all initial and editted submitted suggestions will be sent to the creators' emails for future use.
+
+
 ## Description
 
-- These updates provide a clear and comprehensive enhancement of the website. focusing on improving user experience, enabling full CRUD functionality for suggestions, ensuring smooth interaction across devices, preventing loss of progress and maintaining accuracy between the on-screen cake and downloaded image.
+- These updates provide a clear and comprehensive enhancement of the website. focusing on improving user experience, preventing loss of progress, maintaining accuracy between the on-screen cake and downloaded image, and enabling full CRUD functionality for suggestions.
 
 ## Wireframes
 
 ### MENU:
 ![menu](../assets/menu.png)
+
+### CONFIRMATION PROMPT:
+![comfirmation](../assets/confirmation.png)
+
+### ABOUT US: (same as before)
+![aboutus](../assets/aboutus.png)
 
 ### HTML FORMS: (before inputs)
 ![htmlformsA](../assets/form.png)
@@ -95,11 +100,4 @@
 ### HTML FORMS: (outputs)
 ![htmlformsB](../assets/responses.png)
 
-### SUGGESTION PAGE:
-![suggestions](../assets/suggestions.png)
 
-### CONFIRMATION PROMPT:
-![comfirmation](../assets/confirmation.png)
-
-### ABOUT US: (same as before)
-![aboutus](../assets/aboutus.png)
