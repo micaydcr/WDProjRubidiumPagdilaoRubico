@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<meta charset="UTF-8">
+<title>MiCayke Suggestion Form Responses</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){
+  emailjs.init("16Z62D3epZ8T0K1M9");
+})();
+</script>
+
+<style>
+body{
+   background: url("https://i.pinimg.com/originals/b8/bd/75/b8bd75128eec43631eb19e9c1bb5adad.gif");
+   background-size:cover;
+   font-family:sans-serif;
+   text-align:center;
+}
+
+.container{
+    margin:50px auto;
+    width:600px;
+    background:#ffb6c1cc;
+    padding:30px;
+    border-radius:20px;
+}
+
+.box{
+    background:#fff;
+    margin:10px;
+    padding:10px;
+    border-radius:10px;
+}
+
+button{
+    margin:5px;
+    padding:5px 10px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>YOUR RESPONSES</h1>
+
+<div id="output"></div>
+
+<button onclick="goBack()">Back to Suggestion Forms</button>
+</div>
+
+<script>
+function goBack(){
+    window.location.href = "htmlforms.html";
+}
+
+function load(){
+    let data = JSON.parse(localStorage.getItem("suggestions")) || [];
+    let output = document.getElementById("output");
+
+    output.innerHTML = "";
+
+    data.forEach((item, index)=>{
+        output.innerHTML += `
+        <div class="box">
+            <p><b>${item.name}</b></p>
+            <p>${item.suggestion}</p>
+
+            <button onclick="updateItem(${index})">UPDATE</button>
+            <button onclick="deleteItem(${index})">DELETE</button>
+        </div>
+        `;
+    });
+}
+
+function updateItem(index){
+    let data = JSON.parse(localStorage.getItem("suggestions"));
+
+    let newSuggestion = prompt("Edit your suggestion:", data[index].suggestion);
+
+    if(newSuggestion){
+        data[index].suggestion = newSuggestion;
+        localStorage.setItem("suggestions", JSON.stringify(data));
+
+        emailjs.send("service_deoabz4", "template_zdct1m3", {
+            name: data[index].name,
+            email: data[index].email,
+            suggestion: newSuggestion,
+            action: "UPDATED RESPONSE"
+        });
+
+        load();
+    }
+}
+
+function deleteItem(index){
+    let data = JSON.parse(localStorage.getItem("suggestions"));
+
+    const deleted = data[index];
+
+    data.splice(index,1);
+    localStorage.setItem("suggestions", JSON.stringify(data));
+
+    emailjs.send("service_deoabz4", "template_zdct1m3", {
+        name: deleted.name,
+        email: deleted.email,
+        suggestion: deleted.suggestion,
+        action: "DELETED RESPONSE"
+    });
+
+    load();
+}
+
+window.onload = load;
+</script>
+
+</body>
+</html>

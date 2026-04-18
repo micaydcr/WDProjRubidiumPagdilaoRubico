@@ -90,6 +90,19 @@ overflow-y: auto;
   z-index: 10;
   margin-left: -50px; 
 }
+.button4{
+     padding: 20px 40px;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: arial, sans-serif;
+  cursor: pointer;
+  background: linear-gradient(180deg,#fff,#ffeeef);
+  border:1px solid #d78d99; 
+  border-radius:10px;
+  color:#ce8ea8;
+  z-index: 10;
+  margin-left: -50px; 
+}
 .popup {
   position: fixed;
   inset: 0;
@@ -158,6 +171,7 @@ button:hover {
   <button id="openMenu">Open Menu</button>
     <button id="startDecorating" class="button2">Start Decorating</button>
     <button id="aboutus" class="button3">About Us</button>
+    <button id="suggestionforms" class="button4">Suggestion Forms</button>
 </div>
 
 <div id="popupMenu" class="popup">
@@ -194,6 +208,10 @@ document.getElementById("startDecorating").addEventListener("click", () => {
 
 document.getElementById("aboutus").addEventListener("click", () => {
     window.location.href = "public/aboutus.html"; 
+});
+
+document.getElementById("suggestionforms").addEventListener("click", () => {
+    window.location.href = "public/htmlforms.html"; 
 });
 </script>
 
