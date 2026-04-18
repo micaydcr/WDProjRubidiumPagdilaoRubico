@@ -68,40 +68,6 @@ button{
 button:hover{
     transform:scale(1.05);
 }
-
-.modal{
-    display:none;
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.4);
-    justify-content:center;
-    align-items:center;
-}
-
-.modal-content{
-    background:#ffb6c1;
-    padding:20px;
-    border-radius:15px;
-    width:300px;
-    box-shadow: 5px 5px 10px #b97f91;
-}
-
-.modal-content h3{
-    color:white;
-    text-shadow:1px 1px 3px #966483;
-}
-
-textarea{
-    width:90%;
-    height:80px;
-    border-radius:10px;
-    border:none;
-    padding:10px;
-    margin-top:10px;
-}
 </style>
 </head>
 <body>
@@ -112,15 +78,6 @@ textarea{
 <div id="output"></div>
 
 <button onclick="goBack()">BACK TO SUGGESTION FORM</button>
-</div>
-
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <h3>Edit Suggestion</h3>
-    <textarea id="editInput"></textarea><br>
-    <button onclick="saveEdit()">SAVE</button>
-    <button onclick="closeModal()">CANCEL</button>
-  </div>
 </div>
 
 <script>
