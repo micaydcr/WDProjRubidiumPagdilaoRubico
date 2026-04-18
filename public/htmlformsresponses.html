@@ -17,35 +17,93 @@
 body{
    background: url("https://i.pinimg.com/originals/b8/bd/75/b8bd75128eec43631eb19e9c1bb5adad.gif");
    background-size:cover;
-   font-family:sans-serif;
+   font-family:'Quicksand',sans-serif;
    text-align:center;
 }
 
 .container{
-    margin:50px auto;
+    margin:60px auto;
     width:600px;
     background:#ffb6c1cc;
     padding:30px;
     border-radius:20px;
+    box-shadow: 5px 5px 10px #b97f91;
+}
+
+h1{
+    color:white;
+    text-shadow:2px 2px 5px #966483;
 }
 
 .box{
-    background:#fff;
-    margin:10px;
-    padding:10px;
-    border-radius:10px;
+    background:white;
+    margin:12px 0;
+    padding:15px;
+    border-radius:12px;
+    box-shadow:2px 2px 6px #d89aaa;
+    text-align:left;
+}
+
+.name{
+    font-weight:bold;
+    color:#d88ca0;
+    margin-bottom:5px;
+}
+
+.suggestion{
+    margin-bottom:10px;
 }
 
 button{
-    margin:5px;
-    padding:5px 10px;
+    margin:10px;
+    padding:10px 20px;
+    border-radius:10px;
     border:none;
-    border-radius:8px;
+    background:white;
+    color:#d88ca0;
+    font-weight:bold;
     cursor:pointer;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.4);
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-content{
+    background:#ffb6c1;
+    padding:20px;
+    border-radius:15px;
+    width:300px;
+    box-shadow: 5px 5px 10px #b97f91;
+}
+
+.modal-content h3{
+    color:white;
+    text-shadow:1px 1px 3px #966483;
+}
+
+textarea{
+    width:90%;
+    height:80px;
+    border-radius:10px;
+    border:none;
+    padding:10px;
+    margin-top:10px;
 }
 </style>
 </head>
-
 <body>
 
 <div class="container">
@@ -54,6 +112,15 @@ button{
 <div id="output"></div>
 
 <button onclick="goBack()">Back to Suggestion Forms</button>
+</div>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h3>Edit Suggestion</h3>
+    <textarea id="editInput"></textarea><br>
+    <button onclick="saveEdit()">SAVE</button>
+    <button onclick="closeModal()">CANCEL</button>
+  </div>
 </div>
 
 <script>
