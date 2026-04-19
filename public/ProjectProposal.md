@@ -70,7 +70,7 @@
 
 ## Minor and Major Updates on Features
 
-- **Instruction Page**: The small menu pop-up will be replaced with a dedicated page containing detailed instructions on how to use the site. This is to provide users with clear guidance ***for better experience***.
+- **Visually Appealing**: Will fix the design and style of each webpage, making sure that it has a uniform style and it is easy to navigate.
 
 - **Progress Confirmation**: When attempting to close the cake decorating page, users will receive a confirmation prompt to ***prevent accidental loss of progress***.
 
@@ -84,9 +84,6 @@
 - These updates provide a clear and comprehensive enhancement of the website. focusing on improving user experience, preventing loss of progress, maintaining accuracy between the on-screen cake and downloaded image, and enabling full CRUD functionality for suggestions.
 
 ## Wireframes
-
-### MENU:
-![menu](../assets/menu.png)
 
 ### CONFIRMATION PROMPT:
 ![comfirmation](../assets/confirmation.png)
